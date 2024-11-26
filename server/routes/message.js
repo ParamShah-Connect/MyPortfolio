@@ -12,7 +12,6 @@ router.post("/sendEmail", async (req, res) => {
       return res.status(400).json({ error: "All fields are required." });
     }
   
-    // Simple email format validation
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailRegex.test(email)) {
       return res.status(400).json({ error: "Invalid email format." });
@@ -21,8 +20,8 @@ router.post("/sendEmail", async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "param.sanjay.shah@gmail.com",  // Your email
-        pass:`${process.env.passowrd}`,  // Use an app-specific password if needed
+        user: "param.sanjay.shah@gmail.com", 
+        pass:`${process.env.passowrd}`,  
       },
     });
   
@@ -43,6 +42,10 @@ router.post("/sendEmail", async (req, res) => {
       await transporter.sendMail(mailOptions);
       res.status(200).json({ success: "Message sent successfully!" });
     } catch (error) {
+      console.log(name)
+      console.log(message)
+      console.log(subject)
+      console.log(email)
       res.status(500).json({ error: error });
     }
   });
