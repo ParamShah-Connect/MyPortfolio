@@ -6,19 +6,19 @@ export const Projects = () => {
       title: "Employee Management",
       description: `This project is a functional web application created using Node.js, React, and SQL. It allows users to perform basic tasks like signing up, logging in, and managing data. 
       It provides an interface where users can add, edit, view, and delete records (like tasks, products, or any custom data).`,
-      imageSrc: "src/projects/employee-management.png",
+      imageSrc: "https://mrsoni.me/ZfVZ/",
       githubLink: "https://github.com/nilapshah1984/Trainee/tree/master/employee_management",
     },
     {
       title: "React E-commerce",
       description: `An e-commerce application built with React and Node.js that allows users to browse products, add them to a cart, and place orders. Features include dynamic filtering and user authentication.`,
-      imageSrc: "src/projects/react-ecommerce.png",
+      imageSrc: "https://mrsoni.me/kLIZ/",
       githubLink: "https://github.com/ParamShah-Connect/udemy_clone/",
     },
     {
       title: "Gym Fit",
       description: `A fitness website that offers workout plans and tracking features. Built with React, Node.js, and SQL, it allows users to manage their fitness goals and access a variety of workouts.`,
-      imageSrc: "src/projects/gym_fit.png",
+      imageSrc: "https://mrsoni.me/m2wL/",
       githubLink: "https://github.com/ParamShah-Connect/de_sem_6",
     },
   ];
