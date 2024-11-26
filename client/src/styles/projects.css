@@ -1,0 +1,128 @@
+/* General Styles for Projects Section */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    color: #1abc9c;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+  }
+  
+  /* Styling each project container */
+  .projects {
+    border: 2px solid rgb(255, 254, 252);
+    margin: 100px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px;
+    padding: 30px;
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  .projects:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  }
+  
+  .projects img {
+    height: 400px;
+    width: 400px;
+    border-radius: 500px;
+    object-fit: cover;
+    margin-right: 30px;
+    transition: all 0.3s ease;
+  }
+  
+  .projects img:hover {
+    transform: scale(1.05);
+  }
+  
+  .projects div {
+    text-align: left;
+    flex: 1;
+    max-width: 600px;
+    color: #ccc;
+  }
+  
+  .projects h2 {
+    color: #1abc9c;
+    font-size: 1.8rem;
+    margin: 10px 0;
+  }
+  
+  .projects p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .projects a {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .projects a:hover {
+    background-color: #555;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Mobile and Tablet View */
+  @media (max-width: 768px) {
+    .projects {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .projects img {
+      max-width: 100%;
+      margin: 0 0 20px 0;
+    }
+  
+    .projects h2 {
+      font-size: 1.5rem;
+    }
+  
+    .projects p {
+      font-size: 0.95rem;
+    }
+  
+    .projects a {
+      font-size: 0.9rem;
+      padding: 8px 18px;
+    }
+  }
+  
+  /* Desktop View */
+  @media (min-width: 1024px) {
+    .projects {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .projects h2 {
+      font-size: 1.8rem;
+    }
+  
+    .projects p {
+      font-size: 1.1rem;
+    }
+  }
+  

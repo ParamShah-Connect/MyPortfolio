@@ -1,0 +1,65 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+#div3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+  max-width: 1200px;
+  /* margin: auto; */
+  margin-left: 140px;
+  margin-top: 140px;
+}
+
+#techskills, #hobbies {
+  width: 100%;
+  max-width: 800px;
+  background-color: #111; /* Dark background for sections */
+  border: 1px solid #1abc9c; /* Neon green border */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+h2 {
+  color: #1abc9c; /* Neon green for headings */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #1abc9c;
+  display: inline-block;
+}
+
+#techbtns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+button {
+  background: linear-gradient(145deg, #222, #333); /* Cool gradient for buttons */
+  color: #00ffcc; /* Neon green text */
+  border: 1px solid #00ffcc;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background: #00ffcc;
+  color: black;
+}

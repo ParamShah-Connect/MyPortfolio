@@ -1,0 +1,27 @@
+#navbar{
+    position: sticky;
+    top: 0;
+}
+
+#navbar2{
+    text-align: center; 
+    
+}
+#name{
+    font-size: 70px;
+    margin-left: 20px;
+    color: rgb(104, 227, 155);
+}
+#name:hover{
+    font-size: 80px;
+
+}
+
+
+.navy{
+    margin-left: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: "Goudy Bookletter 1911", sans-serif;
+
+}

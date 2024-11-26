@@ -1,0 +1,66 @@
+#form {
+  background-color: #3333335b; /* Dark background for the form */
+  padding: 30px;
+  width: 50%;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Arial', sans-serif;
+  margin-top: 200px;
+  color: white; /* Text color changed to white for contrast */
+}
+
+#form h1 {
+  text-align: center;
+  color: #fff; /* White color for the header */
+  margin-bottom: 20px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#form input, #form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ffffff; /* Lighter border for contrast */
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #20202073; /* Dark background for input fields */
+  color: white; /* Text color in the input fields */
+}
+
+#form input[type="text"]:focus, #form input[type="email"]:focus, #form textarea:focus {
+  border-color: #00ff51;
+  outline: none;
+}
+
+#form button {
+  background-color: #282f62;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#form button:hover {
+  background-color: #c0d9e8;
+  color: black;
+}
+
+#form input::placeholder, #form textarea::placeholder {
+  color: #aaa; /* Lighter placeholder color */
+}
+
+#form textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+#c1 {
+  margin-top: 50px;
+}
