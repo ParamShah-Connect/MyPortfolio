@@ -16,7 +16,9 @@ app.use(cors(
 ))
 app.use(express.json());
 app.use(bodyParser.json());
-
+app.get("/",(req,res)=>{
+  res.end("hello")
+})
 app.use("/", router);
 
 app.listen(process.env.PORT);
