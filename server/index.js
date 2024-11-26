@@ -9,7 +9,7 @@ dotenv.config();
 
 app.use(cors(
   {
-    origin:["https://shahparam.vercel.app"],
+    origin:["https://shahparam.vercel.app/"],
     methods:["post","get","put","delete"],
     credentials:true
   }

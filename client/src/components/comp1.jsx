@@ -7,7 +7,7 @@ export const Comp1 = () => {
 
     <div id="div1">
 
-      <img src="src\images\me_main.jpg" alt="image" id="img1" />
+      <img src="..\src\images\me_main.jpg" alt="image" id="img1" />
       <div id="aboutme">
         <h2>MERN Stack Developer | Intern at Gravitas Technosoft</h2>
         <p>Node.js, React.js, MongoDB, MySQL, Bootstrap <br></br>
