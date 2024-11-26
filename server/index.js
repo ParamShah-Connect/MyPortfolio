@@ -9,11 +9,12 @@ dotenv.config();
 
 app.use(cors(
   {
-    origin:["https://shahparam.vercel.app"],
+    origin:["https://shah-param.vercel.app"],
     methods:["post","get","put","delete"],
     credentials:true
   }
 ))
+
 app.use(express.json());
 app.use(bodyParser.json());
 app.get("/",(req,res)=>{

@@ -53,7 +53,7 @@
 }
 
 #form input::placeholder, #form textarea::placeholder {
-  color: #aaa; /* Lighter placeholder color */
+  color: #aaa; 
 }
 
 #form textarea {
