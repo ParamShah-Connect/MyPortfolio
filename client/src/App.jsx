@@ -6,6 +6,8 @@ import Projects from "./components/projects.jsx";
 import Lastdiv from "./components/lastdiv.jsx";
 
 function App() {
+
+  
   return (
     <>
       <Navbar />
