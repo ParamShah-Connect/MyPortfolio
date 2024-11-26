@@ -3,16 +3,20 @@ const app = express();
 import cors from "cors";
 import router from "./routes/message.js";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 app.use(cors(
   {
-    // origin:
+    origin:["https://shahparam.vercel.app"],
+    methods:["post","get","put","delete"],
+    credentials:true
   }
 ))
+app.use(express.json());
 app.use(bodyParser.json());
 
 app.use("/", router);
 
-app.listen(8000, () => {
-  console.log("Server is running on port 8000");
-});
+app.listen(process.env.PORT);
