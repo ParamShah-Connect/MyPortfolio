@@ -14,7 +14,6 @@ body {
   gap: 50px;
   padding: 20px;
   max-width: 1200px;
-  /* margin: auto; */
   margin-left: 140px;
   margin-top: 140px;
 }
@@ -62,4 +61,47 @@ button {
 button:hover {
   background: #00ffcc;
   color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #div3 {
+    margin-left: 20px; /* Reduce side margin for smaller screens */
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Adjust heading size for mobile */
+    margin-bottom: 15px;
+  }
+
+  #techskills, #hobbies {
+    max-width: 90%; /* Reduce max width for mobile */
+    padding: 15px;
+  }
+
+  button {
+    padding: 8px 15px; /* Adjust button padding for smaller screens */
+    font-size: 0.9rem; /* Slightly smaller font */
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.2rem; /* Further reduce heading size for very small screens */
+  }
+
+  #techbtns {
+    gap: 10px; /* Reduce button gap */
+  }
+
+  button {
+    padding: 6px 10px; /* Compact buttons for small screens */
+    font-size: 0.8rem;
+  }
+
+  #div3 {
+    gap: 30px; /* Reduce vertical gaps */
+  }
 }
