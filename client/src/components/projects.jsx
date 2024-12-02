@@ -33,7 +33,7 @@ export const Projects = () => {
       ]
     },
     {
-      title: "React E-commerce",
+      title: "EduMarket",
       description: `An e-commerce application built with React and Node.js that allows users to browse products, add them to a cart, and place orders.`,
       detaiedDesc:"An e-commerce platform developed using React for the front-end and Node.js for the back-end. This web application allows users to browse through various products, view detailed information, add items to their shopping cart, and proceed with placing orders. The system is designed to offer a seamless shopping experience, including features like user authentication, real-time cart updates, and order management. Additionally, the platform supports easy product navigation and efficient payment processing, making it a robust solution for online shopping.",
       technologiesUsed: ["React", "Node.js", "MongoDB"],
@@ -62,7 +62,7 @@ export const Projects = () => {
       paymentGateway:"Braintree",
     },
     {
-      title: "Fit-bit gym",
+      title: "FIT-BIT GYM",
       description: `A fitness website that offers workout plans and tracking features. Built with React, Node.js, and SQL, it allows users to manage their fitness goals and access a variety of workouts.`,
       detaiedDesc:"This project is a comprehensive fitness website built using React, Node.js, and SQL, providing users with an interactive platform to manage their fitness journeys. It offers personalized workout plans, progress tracking, and goal-setting features, helping users stay motivated and achieve their fitness objectives. With a sleek, user-friendly interface, users can browse through various workout routines, log their progress, and set fitness goals. The backend uses SQL for efficient data management, ensuring smooth user experience and real-time updates. Whether you're looking to track daily workouts or follow structured plans, this platform offers a seamless solution for fitness enthusiasts of all levels.",
       technologiesUsed: ["React", "Node.js", "SQL"],
