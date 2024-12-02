@@ -36,9 +36,9 @@ const Projectdesc = () => {
   // Prevent page refresh or navigation
   useEffect(() => {
     const handleBeforeUnload = (e) => {
-      const message = "The data will not be visible. Are you sure you want to reload?";
-      e.returnValue = message; // Standard for most browsers
-      return message; // For some older browsers
+      const message = "Refresh leads to loss of data.Are you sure?";
+      e.returnValue = message;
+      return message; 
     };
 
     window.addEventListener("beforeunload", handleBeforeUnload);
