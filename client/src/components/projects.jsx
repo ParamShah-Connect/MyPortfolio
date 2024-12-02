@@ -62,7 +62,7 @@ export const Projects = () => {
       paymentGateway:"Braintree",
     },
     {
-      title: "FIT-BIT GYM",
+      title: "Fit-bit gym",
       description: `A fitness website that offers workout plans and tracking features. Built with React, Node.js, and SQL, it allows users to manage their fitness goals and access a variety of workouts.`,
       detaiedDesc:"This project is a comprehensive fitness website built using React, Node.js, and SQL, providing users with an interactive platform to manage their fitness journeys. It offers personalized workout plans, progress tracking, and goal-setting features, helping users stay motivated and achieve their fitness objectives. With a sleek, user-friendly interface, users can browse through various workout routines, log their progress, and set fitness goals. The backend uses SQL for efficient data management, ensuring smooth user experience and real-time updates. Whether you're looking to track daily workouts or follow structured plans, this platform offers a seamless solution for fitness enthusiasts of all levels.",
       technologiesUsed: ["React", "Node.js", "SQL"],
