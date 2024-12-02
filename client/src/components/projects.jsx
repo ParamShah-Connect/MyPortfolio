@@ -7,7 +7,7 @@ export const Projects = () => {
 
   const projectList = [
     {
-      title: "Employee Management",
+      title: "EMPLOYEE MANAGEMENT",
       description: `This project is a functional web application created using Node.js, React, and SQL. It allows users to perform basic tasks like signing up, logging in, and managing data.`,
       detaiedDesc:"This project is a fully functional web application developed using Node.js, React, and SQL. It allows users to easily sign up, log in, and manage their data with a secure and intuitive interface. The application supports CRUD operations, enabling users to create, read, update, and delete their data. It integrates an SQL database to store and retrieve user information efficiently, ensuring fast access to records. The frontend is built with React and styled using Material-UI, providing a responsive and user-friendly design across devices. Additionally, the application features role-based access control, ensuring that users with different roles can access specific functionalities based on their permissions. This web app provides a seamless experience for managing personal or professional data securely.",
       technologiesUsed: ["Node.js", "React", "SQL"],
