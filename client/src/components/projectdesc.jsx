@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import "../styles/projectDesc.css";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -6,10 +5,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 const Projectdesc = () => {
   const location = useLocation();
   const project = location.state;
+  const navigate = useNavigate();
 
   if (!project) {
-    const navigate = useNavigate();
-
     useEffect(() => {
       navigate("/");
       console.log(project.detaiedDesc);
@@ -35,10 +33,26 @@ const Projectdesc = () => {
     });
   };
 
+  // Prevent page refresh or navigation
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      const message = "The data will not be visible. Are you sure you want to reload?";
+      e.returnValue = message; // Standard for most browsers
+      return message; // For some older browsers
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    // Cleanup listener
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+
   return (
     <div>
       <h1 id="prjTitle">{project.title}</h1>
-      <p style={{margin:"40px 150px"}}>{project.detaiedDesc}</p>
+      <p style={{ margin: "40px 150px" }}>{project.detaiedDesc}</p>
       <div id="technologies">
         <div>
           <h2>Features:</h2>
@@ -85,7 +99,7 @@ const Projectdesc = () => {
         </div>
         <button onClick={scrollRight} className="scroll-btn">➡</button>
       </div>
-        <p id="copyright">© 2024 Param Shah. All rights reserved </p>
+      <p id="copyright">© 2024 Param Shah. All rights reserved</p>
     </div>
   );
 };
