@@ -33,17 +33,15 @@ const Projectdesc = () => {
     });
   };
 
-  // Prevent page refresh or navigation
   useEffect(() => {
     const handleBeforeUnload = (e) => {
-      const message = "Refresh leads to loss of data.Are you sure?";
-      e.returnValue = message;
+      const message = "The data will not be visible. Are you sure you want to reload?";
+      e.returnValue = message; 
       return message; 
     };
 
     window.addEventListener("beforeunload", handleBeforeUnload);
 
-    // Cleanup listener
     return () => {
       window.removeEventListener("beforeunload", handleBeforeUnload);
     };
@@ -52,7 +50,7 @@ const Projectdesc = () => {
   return (
     <div>
       <h1 id="prjTitle">{project.title}</h1>
-      <p style={{ margin: "40px 150px" }}>{project.detaiedDesc}</p>
+      <p style={{ margin: "40px 50px" }}>{project.detaiedDesc}</p>
       <div id="technologies">
         <div>
           <h2>Features:</h2>
