@@ -118,7 +118,8 @@ body {
   }
 
   #projectimages {
-    padding: 10px;
+    height: 400px;
+    width: 400px;
   }
 
   .project-image {

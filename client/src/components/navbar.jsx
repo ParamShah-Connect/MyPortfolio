@@ -12,7 +12,7 @@ export const Navbar = () => {
             to="projects" 
             smooth={true} 
             duration={500} 
-            className="navy"
+            className="navy1"
           >
             Projects
           </Link>
@@ -20,7 +20,8 @@ export const Navbar = () => {
             to="about" 
             smooth={true} 
             duration={500} 
-            className="navy"
+            className="navy1"
+            id="n1"
           >
             About
           </Link>
@@ -28,7 +29,7 @@ export const Navbar = () => {
             to="contact" 
             smooth={true} 
             duration={500} 
-            className="navy"
+            className="navy1"
           >
             Contact
           </Link>
@@ -36,7 +37,7 @@ export const Navbar = () => {
             to="skills" 
             smooth={true} 
             duration={500} 
-            className="navy"
+            className="navy1"
           >
             Skills
           </Link>
