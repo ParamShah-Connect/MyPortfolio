@@ -1,130 +1,107 @@
-/* General Styles for Project Section */
-#prjTitle {
-  text-align: center;
-  color:#1abc9c;
-}
-
-#technologies {
-  margin: 5% 5%;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.tech {
+/* General Styles for Projectdesc Component */
+body {
   margin: 0;
-}
-
-#projectimages-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0;
-  position: relative;
-}
-
-#copyright {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 40px 0px;
-  text-align: center;
+  line-height: 1.6;
+  background-color: #121212; /* Dark background */
+  color: #f1f1f1; /* Light text for readability */
 }
 
-#projectimages {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 10px;
-  padding: 10px 20px;
-  background-color: rgba(71, 4, 4, 0.248);
-}
-
-#projectimages::-webkit-scrollbar {
-  display: none; /* Hides scrollbar for Chrome, Safari, Edge */
-}
-
-#projectimages {
-  -ms-overflow-style: none; /* Hides scrollbar for IE and Edge */
-  scrollbar-width: none; /* Hides scrollbar for Firefox */
-}
-
-/* Styles for each project image */
-.project-image {
-  height: 400px;
-  width: auto;
+.projectdesc-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #1e1e1e; /* Slightly lighter background for contrast */
   border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.project-title {
+  text-align: center;
+  color: #1abc9c; /* Accent color */
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.project-description {
+  text-align: justify;
+  margin: 20px 0;
+  color: #e0e0e0; /* Slightly dimmed text */
+}
+
+.project-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.features, .technologies {
+  flex: 1;
+}
+
+.features h2, .technologies h2 {
+  color: #1abc9c; /* Accent color */
+  margin-bottom: 10px;
+}
+
+.features ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.features li, .technologies p {
+  color: #dcdcdc; /* Dimmed text */
+}
+
+.project-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-image:hover {
-  transform: scale(1.05); /* Zoom effect on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 1); /* Slightly enhanced shadow on hover */
 }
 
-/* Scroll button styles */
-.scroll-btn {
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #1abc9c; /* Accent color */
+  color: #121212; /* Dark text for contrast */
+  border-radius: 8px;
+  margin-top: 20px;
 }
 
-.scroll-btn:hover {
-  background-color: #555;
-  transform: scale(1.1);
-}
-
-.scroll-btn:active {
-  transform: scale(0.95);
-}
-
-/* Responsive Styles for Mobile Screens */
+/* Responsive Design */
 @media (max-width: 768px) {
-  #technologies {
+  .project-details {
     flex-direction: column;
-    gap: 10px;
-    margin: 10%;
-  }
-
-  #projectimages {
-    gap: 5px;
-    padding: 5px 10px;
-  }
-
-  .project-image {
-    height: 200px; /* Reduced height for mobile */
-    width: 100%; /* Adjust to fill available space */
-  }
-
-  .scroll-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-    margin: 0 5px;
+    gap: 15px;
   }
 }
 
 @media (max-width: 480px) {
-  #technologies {
-    margin: 5%;
+  .project-title {
+    font-size: 1.5rem;
   }
 
-  .project-image {
-    height: 150px; /* Further reduced height for smaller screens */
-  }
-
-  .scroll-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 1rem;
+  .features h2, .technologies h2 {
+    font-size: 1.2rem;
   }
 }
