@@ -1,38 +1,63 @@
+/* General Navbar Styles */
 #navbar {
+    position: fixed;
     top: 0;
-    text-align: center;
-}
-
-#navbar2 {
+    width: 100%;
+    background-color: black; /* Black theme */
+    color: white; /* Text color */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    padding: 10px 0;
     text-align: center;
 }
 
 #name {
-    font-size: 70px;
-    margin: 0 auto; /* Centers the element */
-    color: rgb(104, 227, 155);
+    font-size: 2.5rem; /* Adjust font size for a bold name display */
+    color: rgb(104, 227, 155); /* Stylish green color */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; /* Remove default margins */
     text-align: center;
-    display: block; /* Makes the element take full width for centering */
 }
 
-/* Styling for navy1 elements */
-.navy1 {
-    margin-left: 40px;
-    cursor: pointer;
+#navbar2 {
+    margin-top: 10px; /* Space below the name */
+    display: flex;
+    justify-content: space-evenly; /* Even horizontal spacing */
+    align-items: center; /* Center items vertically */
+    padding: 0 20px; /* Add some horizontal padding */
+}
+
+.navy, .navy1 {
+    font-size: 1.2rem; /* Font size for links */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white; /* White text for contrast */
+    text-decoration: none; /* Remove underline */
+    padding: 8px 15px; /* Add some padding */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+    cursor: pointer;
 }
 
-/* Responsive Design for Mobile */
+.navy:hover, .navy1:hover {
+    background-color: rgb(104, 227, 155); /* Highlight color on hover */
+    color: black; /* Contrast color on hover */
+}
+
+/* Responsive Styles for Mobile Screens */
 @media (max-width: 768px) {
     #name {
-        font-size: 50px; /* Smaller font size for mobile */
-        margin: 0px auto; /* Keep it horizontally centered */
-        text-align: center; /* Ensure text is aligned to center */
+        font-size: 2rem; /* Slightly smaller font for mobile */
     }
 
-    .navy1 {
-        margin-left: 0px 5px; /* Remove left margin on mobile */
-        text-align: center; /* Center text */
+    #navbar2 {
+        flex-wrap: wrap; /* Allow wrapping if needed on smaller screens */
+        justify-content: space-around; /* Space items evenly */
+        gap: 10px; /* Space between items */
+        margin-top: 20px;
+    }
+
+    .navy, .navy1 {
+        font-size: 1rem; /* Slightly smaller font for links */
+        padding: 10px; /* Adjust padding for better click area */
     }
 }
