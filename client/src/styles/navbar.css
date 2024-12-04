@@ -9,11 +9,11 @@
 
 #name {
     font-size: 70px;
-    margin: 60px auto; /* Centers the element */
+    margin: 0 auto; /* Centers the element */
     color: rgb(104, 227, 155);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-
+    display: block; /* Makes the element take full width for centering */
 }
 
 /* Styling for navy1 elements */
@@ -27,12 +27,12 @@
 @media (max-width: 768px) {
     #name {
         font-size: 50px; /* Smaller font size for mobile */
-        margin: 0 auto; /* Keep it horizontally centered */
+        margin: 0px auto; /* Keep it horizontally centered */
         text-align: center; /* Ensure text is aligned to center */
     }
 
     .navy1 {
-        margin-left: 0; /* Remove left margin on mobile */
+        margin-left: 0px 5px; /* Remove left margin on mobile */
         text-align: center; /* Center text */
     }
 }
