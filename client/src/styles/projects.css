@@ -1,133 +1,95 @@
-/* General Styles for Projects Section */
+/* General Styles */
 body {
-  background-color: black;
-  color: white;
-  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
 }
 
-h1 {
-  color: #1abc9c;
-  font-size: 50px;
-  text-align: center;
-  margin-top: 80px;
-  margin-bottom: 40px;
-  font-family: "Source Sans Pro", "Arial", sans-serif;
-}
-
-/* Styling each project container */
+/* Projects Container */
 .projects {
-  border: 2px solid rgb(255, 254, 252);
-  margin: 50px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
+  margin: 40px auto;
   padding: 20px;
-  background-color: #2d2d2d;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
+  max-width: 1200px;
+  background-color: #2e2c2c; /* Slightly lighter black for contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  gap: 20px;
 }
-
-.projects:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+#descbtn{
+  color: white;
+  padding: 15px 20px;
 }
-
-.projects img {
+.projects img.prjimg1 {
+  width: 100%;
+  max-width: 400px;
   height: auto;
-  width: 300px;
   border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
-}
-
-.projects img:hover {
-  transform: scale(1.05);
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1); 
 }
 
 .projects div {
-  text-align: center;
   flex: 1;
-  max-width: 600px;
-  color: #ccc;
+  text-align: center;
 }
 
 .projects h2 {
-  color: #1abc9c;
   font-size: 1.8rem;
-  margin: 10px 0;
+  margin-bottom: 10px;
+  color: #00ffcc; /* Neon green for headings */
 }
 
 .projects p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 20px;
+  color: #ccc; /* Light grey for descriptions */
 }
 
-.projects a {
-  color: white;
-  background-color: #333;
+/* GitHub Link and Button */
+.projects a,
+.projects button {
   text-decoration: none;
   padding: 10px 20px;
-  border-radius: 8px;
+  font-size: 1rem;
   font-weight: bold;
-  display: inline-block;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: #000; /* Black text */
+  background-color: #00ffcc; /* Neon green background */
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.projects a:hover {
-  background-color: #555;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+.projects a:hover,
+.projects button:hover {
+  background-color: #040c0a; /* Slightly darker green on hover */
+  color: #fff; /* White text on hover */
 }
 
-/* Responsive Styles */
+.projects button {
+  margin-left: 10px;
+}
 
-/* Tablet View */
-@media (max-width: 768px) {
-  .projects {
-    flex-direction: column;
-    padding: 15px;
+@media screen and (max-width: 768px) {
+  .projects{
     margin: 20px;
   }
-
-  .projects img {
-    width: 100%;
-    border-radius: 15px;
-  }
-
-  .projects div {
-    text-align: center;
-    margin-top: 15px;
-  }
-
-  .projects h2 {
-    font-size: 1.5rem;
-  }
-
-  .projects p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .projects a {
-    font-size: 0.9rem;
-    padding: 8px 18px;
-  }
 }
 
-/* Mobile View */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .projects {
-    margin: 10px;
     padding: 10px;
+    margin: 20px auto;
   }
 
-  h1 {
-    font-size: 2rem;
+  .projects img.prjimg1 {
+    max-width: 250px;
   }
 
   .projects h2 {
@@ -138,7 +100,8 @@ h1 {
     font-size: 0.8rem;
   }
 
-  .projects a {
+  .projects a,
+  .projects button {
     font-size: 0.8rem;
     padding: 6px 12px;
   }

@@ -124,7 +124,7 @@ export const Projects = () => {
             >
               GitHub Link
             </a>
-            <button onClick={()=>goToDescription(project)}>Description</button>
+            <button id="descbtn" onClick={()=>goToDescription(project)}>Description</button>
           </div>
         </div>
       ))}

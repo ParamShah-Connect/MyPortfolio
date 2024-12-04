@@ -1,14 +1,25 @@
+#navbar{
+    top: 0;
+    text-align: center;
+}
+
+#navbar2{
+    text-align: center; 
+    
+}
 #name{
     font-size: 70px;
+    margin-left: 20px;
     color: rgb(104, 227, 155);
 }
-#navbar{
-    text-align: center;
-    justify-content: center;
+#name:hover{
+    font-size: 80px;
+
 }
+
+
 .navy1{
-    font-size: 20px;
+    margin-left: 40px;
     cursor: pointer;
-    font-family: "Goudy Bookletter 1911", sans-serif;
-    margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

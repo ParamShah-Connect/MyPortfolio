@@ -12,7 +12,7 @@ export const Navbar = () => {
             to="projects" 
             smooth={true} 
             duration={500} 
-            className="navy1"
+            className="navy"
           >
             Projects
           </Link>

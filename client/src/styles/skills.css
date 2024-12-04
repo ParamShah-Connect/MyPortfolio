@@ -66,7 +66,7 @@ button:hover {
 /* Responsive Styles */
 @media (max-width: 768px) {
   #div3 {
-    margin-left: 20px; /* Reduce side margin for smaller screens */
+    margin-left: 0px; /* Reduce side margin for smaller screens */
     margin-top: 20px;
     padding: 10px;
   }
