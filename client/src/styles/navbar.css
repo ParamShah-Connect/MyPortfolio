@@ -9,14 +9,14 @@
 
 #name {
     font-size: 70px;
-    margin: 0 auto; /* Center horizontally */
+    margin: 60px auto; /* Centers the element */
     color: rgb(104, 227, 155);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center; /* Ensure text is aligned */
-    display: inline-block; /* Ensure it takes up only necessary space */
+    text-align: center;
+
 }
 
-/* Styling for the navy1 elements */
+/* Styling for navy1 elements */
 .navy1 {
     margin-left: 40px;
     cursor: pointer;
@@ -26,14 +26,13 @@
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     #name {
-        font-size: 50px; /* Adjust font size for smaller screens */
-        margin: 0 auto; /* Ensure horizontal centering */
-        display: block; /* Block display ensures full-width centering */
-        width: 100%; /* Take full width to align centrally */
+        font-size: 50px; /* Smaller font size for mobile */
+        margin: 0 auto; /* Keep it horizontally centered */
+        text-align: center; /* Ensure text is aligned to center */
     }
 
     .navy1 {
-        margin-left: 10px; /* Reset spacing for mobile layout */
-        text-align: center; /* Align text centrally */
+        margin-left: 0; /* Remove left margin on mobile */
+        text-align: center; /* Center text */
     }
 }
