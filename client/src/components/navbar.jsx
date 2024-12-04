@@ -5,7 +5,7 @@ export const Navbar = () => {
   return (
     <>
       <div id="navbar" style={{marginTop:"-60px"}}>
-        <h1 id="name" style={{fontFamily:"Verdana, sans-serif"}}>Param Shah</h1>
+        <h1 id="name">Param Shah</h1>
         
         <div id="navbar2">
           <Link 

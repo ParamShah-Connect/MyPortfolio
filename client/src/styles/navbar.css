@@ -11,10 +11,7 @@
     font-size: 70px;
     margin-left: 20px;
     color: rgb(104, 227, 155);
-}
-#name:hover{
-    font-size: 80px;
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
