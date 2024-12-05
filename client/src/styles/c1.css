@@ -16,10 +16,10 @@ body {
   gap: 20px;
   padding: 40px;
   max-width: 1200px;
-  margin: 50px auto;
+  margin: 120px auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  background-color: #2e2c2c; /* Slightly lighter black for contrast */
+  background-color: #2e2c2c; 
 }
 
 #img1 {
