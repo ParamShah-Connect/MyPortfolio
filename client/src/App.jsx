@@ -13,7 +13,7 @@ function App() {
     let visits = localStorage.getItem("visits");
     console.log("total visits: ",visits)
     if (visits) {
-      localStorage.setItem("visits", parseFloat(visits) + 0.5); 
+      localStorage.setItem("visits", parseFloat(visits) + 1); 
     } else {
       localStorage.setItem("visits", 1); 
     }
