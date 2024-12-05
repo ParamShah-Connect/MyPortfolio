@@ -64,3 +64,12 @@
 #c1 {
   margin-top: 50px;
 }
+
+@media (max-width: 480px) {
+
+  #form{
+    padding: 30px;
+    width: 75%;
+    margin-top: 50px;
+  }
+}

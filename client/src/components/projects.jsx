@@ -97,34 +97,24 @@ export const Projects = () => {
   
   return (
     <>
-      <h1 style={{ marginTop: "200px", textAlign: "center" }}>My Projects:</h1>
+      <h1 className="projectname">My Projects</h1>
       {projectList.map((project, index) => (
         <div className="projects" key={index}>
           <img src={project.imageSrc} alt={`${project.title} screenshot`} className="prjimg1" />
-          <div style={{ textAlign: "center", margin: "100px" }}>
+          <div className="prjdess">
             <h2>{project.title}</h2>
             <p>{project.description}</p>
-            <a
-              style={{
-                textDecoration: "none",
-                padding: "10px 20px",
-                color: "white",
-                backgroundColor: "#333",
-                borderRadius: "8px",
-                fontWeight: "bold",
-                display: "inline-block",
-                transition: "all 0.3s ease",
-                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-              }}
+            <div className="prjbtn">
+
+            <a className="descbtn" id="gitlink"
               href={project.githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              onMouseEnter={(e) => (e.target.style.backgroundColor = "#555")}
-              onMouseLeave={(e) => (e.target.style.backgroundColor = "#333")}
-            >
+              >
               GitHub Link
             </a>
-            <button id="descbtn" onClick={()=>goToDescription(project)}>Description</button>
+            <a className="descbtn" onClick={()=>goToDescription(project)}>Description</a>
+            </div>
           </div>
         </div>
       ))}

@@ -47,8 +47,8 @@ h2 {
 }
 
 button {
-  background: linear-gradient(145deg, #222, #333); /* Cool gradient for buttons */
-  color: #00ffcc; /* Neon green text */
+  background: linear-gradient(145deg, #222, #333); 
+  color: #00ffcc; 
   border: 1px solid #00ffcc;
   border-radius: 8px;
   padding: 10px 20px;
