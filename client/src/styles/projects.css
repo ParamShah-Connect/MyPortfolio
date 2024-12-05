@@ -104,5 +104,9 @@ body {
   .projects button {
     font-size: 0.8rem;
     padding: 6px 12px;
+    margin-top: 20px;
+    width: 200px;
+    background-color: black;
   }
+
 }
