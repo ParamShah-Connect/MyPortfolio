@@ -39,6 +39,7 @@ function App() {
 
         <Route path="/projects/:projectname" element={<Projectdesc />} />
         <Route path="/upload" element={<Upload/>} />
+        <Route path="/hello" element={<h1>hey there</h1>}  />
       </Routes>
     </BrowserRouter>
   );
