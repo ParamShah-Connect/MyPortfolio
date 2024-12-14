@@ -74,7 +74,7 @@ function ImageUpload() {
 
   return (
     <div className="upload-container">
-      <h1>Upload Image</h1>
+      <h1>Upload here</h1>
       <input 
         type="file" 
         accept="image/*" 
