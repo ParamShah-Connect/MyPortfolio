@@ -8,8 +8,6 @@ import router from "./routes/message.js";
 import imageRoute from "./routes/imagesRoute.js";
 
 dotenv.config();
-const url = process.env.mongo_url;
-
 const app = express();
 
 app.use(fileUpload({
@@ -28,7 +26,7 @@ app.use(cors(
   }
 ))
 
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://prathmesh:wwOEKcgZRFpGD18h@param.r8li7.mongodb.net/?retryWrites=true&w=majority&appName=param", { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("DB connected");
   })
