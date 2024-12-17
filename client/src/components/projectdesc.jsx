@@ -12,7 +12,7 @@ const Projectdesc = () => {
       navigate("/");
     }, [navigate]);
 
-    return null; // Return null or a loading indicator while navigating
+    return null; 
   }
 
   useEffect(() => {

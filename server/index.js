@@ -2,10 +2,10 @@
 import express from "express";
 import fileUpload from "express-fileupload";
 import dotenv from "dotenv";
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
 import cors from "cors";
 import router from "./routes/message.js";
-import imageRoute from "./routes/imagesRoute.js";
+// import imageRoute from "./routes/imagesRoute.js";
 
 dotenv.config();
 const url = process.env.mongo_url;
@@ -29,17 +29,17 @@ app.use(cors(
   }
 ))
 
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log("DB connected");
-  })
-  .catch((err) => {
-    console.error("DB connection error:", err);
-  });
+// mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+//   .then(() => {
+//     console.log("DB connected");
+//   })
+//   .catch((err) => {
+//     console.error("DB connection error:", err);
+//   });
 
 app.use(express.json());
 app.use("/", router);
-app.use("/image", imageRoute);
+// app.use("/image", imageRoute);
 
 app.listen(process.env.PORT, () => {
   console.log("Server is running");
