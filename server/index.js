@@ -22,7 +22,7 @@ app.use(express.static("public"));
 
 app.use(cors(
   {
-    origin:["https://shahparam.vercel.app"],
+    origin:["https://shah-param.vercel.app"],
     methods:["post","get","put","delete"],
     credentials:true
   }
