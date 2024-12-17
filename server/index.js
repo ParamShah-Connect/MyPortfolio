@@ -23,7 +23,7 @@ app.use(express.static("public"));
 
 app.use(cors(
   {
-    origin:["http://localhost:5173","https://shah-param.vercel.app","https://shahparam.vercel.app/"],
+    origin:["http://localhost:5173","https://shah-param.vercel.app","https://shahparam.vercel.app"],
     methods:["post","get","put","delete"],
     credentials:true
   }
