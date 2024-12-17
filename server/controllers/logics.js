@@ -5,6 +5,7 @@ dotenv.config();
 
 export default async function sendMessage(req, res) {
     const { name, email, subject, message } = req.body;
+     console.log(name,email,subject,message);
     if (!name || !email || !subject || !message) {
       return res.status(400).json({ error: "All fields are required." });
     }
