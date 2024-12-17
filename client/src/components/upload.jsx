@@ -40,7 +40,7 @@ function ImageUpload() {
 
   const sendToBackend = async (buffer, imageType, randomString) => {
     try {
-      const response = await fetch('http://localhost:8000/image/uploadImage', {
+      const response = await fetch('https://shah-param.vercel.app/image/uploadImage', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ function ImageUpload() {
       const data = await response.json();
       if (response.ok) {
         console.log('Image uploaded successfully:', data);
-        setImageUrl(`http://localhost:8000/getImage/${randomString}`);
+        setImageUrl(`https://shah-param.vercel.app/image/getImage/${randomString}`);
       } else {
         console.error('Error uploading image:', data);
         setError('Failed to upload image.');
