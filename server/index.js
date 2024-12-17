@@ -22,11 +22,12 @@ app.use(express.static("public"));
 
 app.use(cors(
   {
-    origin:["https://shah-param.vercel.app"],
+    origin:["https://shahparam.vercel.app"],
     methods:["post","get","put","delete"],
     credentials:true
   }
 ))
+
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("DB connected");
