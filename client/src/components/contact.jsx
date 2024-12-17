@@ -31,7 +31,6 @@ export const Contact = () => {
       console.error("Error:", error);
     }
 
-    // Reset form fields after submission
     setName("");
     setEmail("");
     setSubject("");
