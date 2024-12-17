@@ -54,7 +54,7 @@ function ImageUpload() {
       const data = await response.json();
       if (response.ok) {
         console.log('Image uploaded successfully:', data);
-        setImageUrl(`https://shah-param.vercel.app/image/getImage/${randomString}`);
+        setImageUrl(`http://localhost:80000/image/getImage/${randomString}`);
       } else {
         console.error('Error uploading image:', data);
         setError('Failed to upload image.');

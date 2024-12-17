@@ -30,7 +30,7 @@ export const uploadImage = async (req, res) => {
 export const fetchImage = async (req, res) => {
   try {
     const { identifier } = req.params;
-
+    
     const image = await imageModel.findOne({ identifier });
 
     if (!image) {
