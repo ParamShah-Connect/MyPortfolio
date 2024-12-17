@@ -13,7 +13,7 @@ export const Contact = () => {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("https://shahparam.vercel.app/sendEmail", {
+      const response = await fetch("https://shah-param.vercel.app/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
