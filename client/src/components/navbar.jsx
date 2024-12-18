@@ -1,46 +1,84 @@
-import { Link } from "react-scroll";  // Import Link from react-scroll
-import "../styles/navbar.css";
+// import { Link } from "react-scroll";  // Import Link from react-scroll
+// import "../styles/navbar.css";  // Your custom CSS for the Navbar
+
+// export const Navbar = () => {
+//   return (
+//     <>
+//       <div id="navbar" style={{ marginTop: "-60px" }}>
+//         <h1 id="name" style={{ fontFamily: "Verdana, sans-serif" }}>
+//           Param Shah
+//         </h1>
+
+//         <div id="navbar2">
+//           <Link
+//             to="projects"
+//             smooth={true}
+//             duration={500}
+//             className="navy"
+//           >
+//             Projects
+//           </Link>
+//           <Link
+//             to="about"
+//             smooth={true}
+//             duration={500}
+//             className="navy"
+//           >
+//             About
+//           </Link>
+//           <Link
+//             to="contact"
+//             smooth={true}
+//             duration={500}
+//             className="navy"
+//           >
+//             Contact
+//           </Link>
+//           <Link
+//             to="skills"
+//             smooth={true}
+//             duration={500}
+//             className="navy"
+//           >
+//             Skills
+//           </Link>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default Navbar;
+import { Link, NavLink } from "react-scroll";  
+import { NavLink as RouterNavLink } from "react-router-dom";  
+import "../styles/navbar.css";  
 
 export const Navbar = () => {
   return (
     <>
-      <div id="navbar" style={{marginTop:"-60px"}}>
-        <h1 id="name">Param Shah</h1>
-        
+      <div id="navbar" style={{ marginTop: "-60px" }}>
+        <h1 id="name" style={{ fontFamily: "Verdana, sans-serif" }}>
+          Param Shah
+        </h1>
+
         <div id="navbar2">
-          <Link 
-            to="projects" 
-            smooth={true} 
-            duration={500} 
-            className="navy"
-          >
+          <Link to="projects" smooth={true} duration={500} className="navy">
             Projects
           </Link>
-          <Link 
-            to="about" 
-            smooth={true} 
-            duration={500} 
-            className="navy1"
-            id="n1"
-          >
+          <Link to="about" smooth={true} duration={500} className="navy">
             About
           </Link>
-          <Link 
-            to="contact" 
-            smooth={true} 
-            duration={500} 
-            className="navy1"
-          >
+          <Link to="contact" smooth={true} duration={500} className="navy">
             Contact
           </Link>
-          <Link 
-            to="skills" 
-            smooth={true} 
-            duration={500} 
-            className="navy1"
-          >
+          <Link to="skills" smooth={true} duration={500} className="navy">
             Skills
           </Link>
+
+          {/* Upload route link (this should not scroll) */}
+          <RouterNavLink to="/upload" className="navy">
+            Upload
+          </RouterNavLink>
         </div>
       </div>
     </>

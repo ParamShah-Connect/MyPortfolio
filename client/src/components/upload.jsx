@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import "../styles/upload.css";
 import { ToastContainer, toast } from 'react-toastify';
@@ -6,6 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 function ImageUpload() {
   const [error, setError] = useState('');
   const [imageUrl, setImageUrl] = useState('');
+  const [previewUrl, setPreviewUrl] = useState('');
+  const [isUploading, setIsUploading] = useState(false);
 
   const generateRandomString = () => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -22,12 +25,9 @@ function ImageUpload() {
     if (file) {
       if (file.type.startsWith('image/')) {
         const reader = new FileReader();
-        reader.readAsArrayBuffer(file);
+        reader.readAsDataURL(file);
         reader.onloadend = () => {
-          const buffer = reader.result;
-          const imageType = file.type;
-          const randomString = generateRandomString();
-          sendToBackend(buffer, imageType, randomString);
+          setPreviewUrl(reader.result);
         };
         reader.onerror = () => {
           setError('Error reading the file.');
@@ -38,31 +38,61 @@ function ImageUpload() {
     }
   };
 
-  const sendToBackend = async (buffer, imageType, randomString) => {
-    try {
-      const response = await fetch('https://shah-param.vercel.app/image/uploadImage', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          identifier: randomString,
-          imageType: imageType,
-          buffer: Array.from(new Uint8Array(buffer)),
-        }),
-      });
-      const data = await response.json();
-      if (response.ok) {
-        console.log('Image uploaded successfully:', data);
-        setImageUrl(`http://localhost:80000/image/getImage/${randomString}`);
-      } else {
-        console.error('Error uploading image:', data);
-        setError('Failed to upload image.');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      setError('Error uploading image.');
+  const handleUpload = async () => {
+    if (!previewUrl) {
+      setError('No image selected.');
+      return;
     }
+
+    setIsUploading(true);
+    const file = document.querySelector('input[type="file"]').files[0];
+    const reader = new FileReader();
+
+    reader.readAsArrayBuffer(file);
+    reader.onloadend = async () => {
+      const buffer = reader.result;
+      const imageType = file.type;
+      const randomString = generateRandomString();
+
+      try {
+        const response = await fetch('https://shah-param.vercel.app/image/uploadImage', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            identifier: randomString,
+            imageType: imageType,
+            buffer: Array.from(new Uint8Array(buffer)),
+          }),
+        });
+        const data = await response.json();
+        if (response.ok) {
+          console.log('Image uploaded successfully:', data);
+          setImageUrl(`http://localhost:8000/image/getImage/${randomString}`);
+          toast.success('Image uploaded successfully!');
+        } else {
+          console.error('Error uploading image:', data);
+          setError('Failed to upload image.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        setError('Error uploading image.');
+      } finally {
+        setIsUploading(false);
+        resetUI();
+      }
+    };
+    reader.onerror = () => {
+      setError('Error reading the file.');
+      setIsUploading(false);
+    };
+  };
+
+  const resetUI = () => {
+    setPreviewUrl('');
+    setError('');
+    document.querySelector('input[type="file"]').value = null;
   };
 
   const handleCopy = () => {
@@ -80,10 +110,23 @@ function ImageUpload() {
         accept="image/*" 
         onChange={handleImageChange} 
         className="file-input"
+        hidden
       />
-      <button onClick={() => document.querySelector('input[type="file"]').click()} className="upload-button">
-        Select Image
-      </button>
+      {!previewUrl ? (
+        <button onClick={() => document.querySelector('input[type="file"]').click()} className="upload-button">
+          Select Image
+        </button>
+      ) : (
+        <>
+          <div className="preview-container">
+            <img src={previewUrl} alt="Preview" className="image-preview" />
+            <button onClick={resetUI} className="reset-button">Change Image</button>
+          </div>
+          <button onClick={handleUpload} className="submit-button" disabled={isUploading}>
+            {isUploading ? 'Uploading...' : 'Upload Image'}
+          </button>
+        </>
+      )}
       {error && <p className="error-message">{error}</p>}
       {imageUrl && (
         <div className="image-url-container">
