@@ -103,7 +103,9 @@ function ImageUpload() {
   };
 
   return (
-    <div className="upload-container">
+    <div>
+      <h3 id='explaination'>Sometimes images from folders don’t load properly on servers, which can cause issues in web development. This feature lets you upload images and generates a URL that you can use anywhere. The URL makes sure the image is always accessible and easy to integrate into your projects</h3>
+    <div className="upload-container">  
       <h1>Upload here</h1>
       <input 
         type="file" 
@@ -111,7 +113,7 @@ function ImageUpload() {
         onChange={handleImageChange} 
         className="file-input"
         hidden
-      />
+        />
       {!previewUrl ? (
         <button onClick={() => document.querySelector('input[type="file"]').click()} className="upload-button">
           Select Image
@@ -136,6 +138,7 @@ function ImageUpload() {
       )}
       <ToastContainer />
     </div>
+      </div>
   );
 }
 

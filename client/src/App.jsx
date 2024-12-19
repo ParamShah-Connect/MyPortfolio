@@ -10,13 +10,17 @@ import Upload from "./components/upload";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar /> 
+      {/* <Navbar />  */}
 
       <Routes>
         <Route
           path="/"
           element={
             <>
+              <div id="navbar">
+                <Navbar />
+              </div>
+
               <div id="about">
                 <Comp1 />
               </div>
