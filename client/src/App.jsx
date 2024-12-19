@@ -6,6 +6,7 @@ import Contact from "./components/contact";
 import Projects from "./components/projects";
 import Lastdiv from "./components/lastdiv";
 import Upload from "./components/upload";  
+import Projectdesc from "./components/projectdesc";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             </>
           }
         />
+	    <Route path="/projects/:projectname" element={<Projectdesc />} />
 
         <Route path="/upload" element={<Upload />} />
       </Routes>
